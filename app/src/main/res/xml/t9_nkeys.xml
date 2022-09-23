@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:verticalGap="0dp"
+    android:keyHeight="60dp"
+    android:horizontalGap="0dp"
+    android:keyWidth="33%p"
+
+    >
+    <Row>
+        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
+        <Key android:codes="50" android:keyLabel="2"/>
+        <Key android:codes="51" android:keyLabel="3" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="52" android:keyLabel="4" android:keyEdgeFlags="left"/>
+        <Key android:codes="53" android:keyLabel="5"/>
+        <Key android:codes="54" android:keyLabel="6" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="55" android:keyLabel="7" android:keyEdgeFlags="left"/>
+        <Key android:codes="56" android:keyLabel="8"/>
+        <Key android:codes="57" android:keyLabel="9" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="48,43,46" android:keyLabel="0 + ." android:keyWidth="50%p"/>
+        <Key android:codes="-1" android:keyLabel="aA" android:keyWidth="50%p"/>
+        <!-- DOBLE TAP PARA ELEGIR LA SEGUNDA OPCION -->
+        </Row>
+    <!-- ASCII ALPHABET : http://www.kerryr.net/pioneers/ascii2.htm -->
+</Keyboard>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:verticalGap="0dp"
+    android:keyHeight="60dp"
+    android:horizontalGap="0dp"
+    android:keyWidth="33%p"
+
+    >
+    <Row>
+        <Key android:codes="-1" android:keyLabel=",.?!" android:keyEdgeFlags="left"/>
+        <Key android:codes="65,66,67" android:keyLabel="ABC"/>
+        <Key android:codes="68,69,70" android:keyLabel="DEF" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="71,72,73" android:keyLabel="GHI" android:keyEdgeFlags="left"/>
+        <Key android:codes="74,75,76" android:keyLabel="JKL"/>
+        <Key android:codes="77,78,79,165" android:keyLabel="MNOÑ" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="80,81,82,83" android:keyLabel="PQRS" android:keyEdgeFlags="left"/>
+        <Key android:codes="84,85,86" android:keyLabel="TUV"/>
+        <Key android:codes="87,88,89,90" android:keyLabel="WXYZ" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="48,43" android:keyLabel="SPACE" android:keyWidth="50%p"/>
+        <Key android:codes="-1" android:keyLabel="a1" android:keyWidth="50%p"/>
+        <!-- DOBLE TAP PARA ELEGIR LA SEGUNDA OPCION -->
+    </Row>
+    <!-- ASCII ALPHABET : http://www.kerryr.net/pioneers/ascii2.htm -->
+</Keyboard>

@@ -46,7 +46,11 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
     private var metaState: Long = 0
 
     private var qwertyKeyboard: LatinKeyboard? = null
-
+    //NEW
+    //private var t9lKeyboard: LatinKeyboard? = null
+    //private var t9uKeyboard: LatinKeyboard? = null
+    //private var t9nKeyboard: LatinKeyboard? = null
+    //
     private lateinit var wordSeparators: Set<Char>
 
     val ngrams: NGrams by inject()
@@ -76,6 +80,11 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
             lastDisplayWidth = displayWidth
         }
         this.qwertyKeyboard = LatinKeyboard(this, R.xml.qwerty)
+        //NEW
+        //this.t9lKeyboard = LatinKeyboard(this, R.xml.t9_lkeys)
+        //this.t9uKeyboard = LatinKeyboard(this, R.xml.t9_ukeys)
+        //this.t9nKeyboard = LatinKeyboard(this, R.xml.t9_nkeys)
+        //
     }
 
     /**
