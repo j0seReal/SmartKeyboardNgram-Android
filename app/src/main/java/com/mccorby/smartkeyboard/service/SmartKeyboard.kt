@@ -45,9 +45,9 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
     private var lastShiftTime: Long = 0
     private var metaState: Long = 0
 
-    private var qwertyKeyboard: LatinKeyboard? = null
+    //private var qwertyKeyboard: LatinKeyboard? = null
     //NEW
-    //private var t9lKeyboard: LatinKeyboard? = null
+    private var t9lKeyboard: LatinKeyboard? = null
     //private var t9uKeyboard: LatinKeyboard? = null
     //private var t9nKeyboard: LatinKeyboard? = null
     //
@@ -71,7 +71,7 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
      * is called after creation and any configuration change.
      */
     override fun onInitializeInterface() {
-        if (this.qwertyKeyboard != null) {
+        if (this.t9lKeyboard != null) {
             // Configuration changes can happen after the keyboard gets recreated,
             // so we need to be able to re-build the keyboards if the available
             // space has changed.
@@ -79,7 +79,7 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
             if (displayWidth == lastDisplayWidth) return
             lastDisplayWidth = displayWidth
         }
-        this.qwertyKeyboard = LatinKeyboard(this, R.xml.qwerty)
+        this.t9lKeyboard = LatinKeyboard(this, R.xml.t9_lkeys)
         //NEW
         //this.t9lKeyboard = LatinKeyboard(this, R.xml.t9_lkeys)
         //this.t9uKeyboard = LatinKeyboard(this, R.xml.t9_ukeys)
@@ -98,7 +98,7 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
             R.layout.input, null
         ) as LatinKeyboardView
         inputView!!.setOnKeyboardActionListener(this)
-        setLatinKeyboard(this.qwertyKeyboard!!)
+        setLatinKeyboard(this.t9lKeyboard!!)
         return inputView
     }
 
@@ -196,7 +196,7 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
 
         // Update the label on the enter key, depending on what the application
         // says it will do.
-        this.qwertyKeyboard!!.setImeOptions(resources, attribute.imeOptions)
+        this.t9lKeyboard!!.setImeOptions(resources, attribute.imeOptions)
     }
 
     /**
@@ -225,7 +225,7 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
     override fun onStartInputView(attribute: EditorInfo, restarting: Boolean) {
         super.onStartInputView(attribute, restarting)
         // Apply the selected keyboard to the input view.
-        setLatinKeyboard(this.qwertyKeyboard!!)
+        setLatinKeyboard(this.t9lKeyboard!!)
         inputView!!.closing()
         val subtype = inputMethodManager!!.currentInputMethodSubtype
         inputView!!.setSubtypeOnSpaceKey(subtype)
@@ -391,7 +391,7 @@ class SmartKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListene
      * editor state.
      */
     private fun updateShiftKeyState(attr: EditorInfo?) {
-        if (attr != null && inputView != null && this.qwertyKeyboard == inputView!!.keyboard
+        if (attr != null && inputView != null && this.t9lKeyboard == inputView!!.keyboard
         ) {
             var caps = 0
             val ei = currentInputEditorInfo
