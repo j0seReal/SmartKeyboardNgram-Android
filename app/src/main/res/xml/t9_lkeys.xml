@@ -3,7 +3,7 @@
     android:verticalGap="0dp"
     android:keyHeight="60dp"
     android:horizontalGap="0dp"
-    android:keyWidth="25%p"
+    android:keyWidth="20%p"
 
     >
     <Row>
@@ -11,26 +11,34 @@
         <Key android:codes="-1" android:keyIcon="@drawable/sym_keyboard_shift"
             android:isModifier="true"
             android:isSticky="true" android:keyEdgeFlags="left"/>
-        <Key android:codes="50" android:keyLabel="abc"></Key>
-        <Key android:codes="51" android:keyLabel="def"></Key>
-        <!--NECESARIO-->
-        <Key android:codes="-5" android:keyIcon="@drawable/sym_keyboard_delete"
-            android:keyEdgeFlags="right"
-            android:isRepeatable="true"/>
-    </Row>
-    <Row>
-        <Key android:codes="52" android:keyLabel="ghi" android:keyEdgeFlags="left"></Key>
-        <Key android:codes="53" android:keyLabel="jkl"></Key>
-        <Key android:codes="54" android:keyLabel="lmno" android:keyEdgeFlags="right"></Key>
+        <Key android:codes="46,44,33" android:keyLabel=".,!"></Key>
+        <Key android:codes="97,98,99" android:keyLabel="abc"></Key>
+        <Key android:codes="100,101,102" android:keyLabel="def"></Key>
         <Key android:codes="-3" android:keyLabel="DONE" android:keyHeight="50%p" android:keyEdgeFlags="right"></Key>
+        <!--NECESARIO-->
+
     </Row>
     <Row>
-        <Key android:codes="55" android:keyLabel="pqrs" android:keyEdgeFlags="left"></Key>
-        <Key android:codes="56" android:keyLabel="tuv"></Key>
-        <Key android:codes="57" android:keyLabel="wxyz" android:keyEdgeFlags="right"></Key>
+
+        <Key android:codes="-5" android:keyIcon="@drawable/sym_keyboard_delete"
+            android:keyHeight="50%p"
+            android:keyEdgeFlags="left"
+            android:isRepeatable="true"/>
+        <Key android:codes="103,104,105" android:keyLabel="ghi"></Key>
+        <Key android:codes="106,107,108" android:keyLabel="jkl"></Key>
+        <Key android:codes="77,78,79" android:keyLabel="mno" android:keyEdgeFlags="right"></Key>
+
     </Row>
     <Row>
-        <Key android:codes="48" android:keyLabel="__" android:keyWidth="50%p" android:keyEdgeFlags="left"></Key>
+
+        <Key android:codes="80,81,82,83" android:keyLabel="pqrs"
+            android:horizontalGap="20%p" android:keyEdgeFlags="left"></Key>
+        <Key android:codes="84,85,86" android:keyLabel="tuv"></Key>
+        <Key android:codes="87,88,89,90" android:keyLabel="wxyz" android:keyEdgeFlags="right"></Key>
+
+    </Row>
+    <Row>
+        <Key android:codes="32" android:keyLabel="__" android:keyWidth="50%p" android:keyEdgeFlags="left"></Key>
         <!--NECESARIO-->
         <Key android:codes="-101"
             android:keyWidth="1%p"/>
